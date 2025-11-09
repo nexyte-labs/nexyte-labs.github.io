@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nexyte — Nexus + Byte</title>
+  <meta name="description" content="Nexyte — student-built web solutions for schools, hotels, and businesses." />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site">
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="brand" aria-hidden="false">
+          <div class="logo" aria-hidden="true">
+            <img class="logo-img logo-light" src="images/logo-light.png" alt="Nexyte logo (light)">
+            <img class="logo-img logo-dark"  src="images/logo-dark.png"  alt="Nexyte logo (dark)">
+          </div>
+
+          <div class="brand-text">
+            <h1>Nexyte</h1>
+            <p class="sub">coding ideas into reality</p>
+          </div>
+        </div>
+
+        <nav id="main-nav" class="nav" role="navigation" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <button id="theme-toggle" class="btn-toggle" aria-pressed="false">Dark</button>
+        </nav>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main class="container" id="top">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-left">
+          <span class="eyebrow">Team • Web Development</span>
+          <h2 id="hero-heading">We create clean and modern websites with the enthusiasm and the precision of professionals.</h2>
+          <p class="lead">
+            Nexyte is a team that's really into making websites for schools, hotels, and local businesses. We bring together design, accessibility, and top-notch performance to deliver websites that grow as our clients do.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn primary">Get a Quote</a>
+            <a href="#portfolio" class="btn outline">View Demos</a>
+          </div>
+
+          <div class="stats" aria-hidden="true">
+            <div class="stat">
+              <div class="num">0+</div>
+              <div class="label">Clients (starting out)</div>
+            </div>
+            <div class="stat">
+              <div class="num">4</div>
+              <div class="label">Team Members</div>
+            </div>
+            <div class="stat">
+              <div class="num">100%</div>
+              <div class="label">Learning Mindset</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80" alt="Team collaborating on laptops" />
+            <div class="featured" aria-hidden="true">
+              <div class="featured-small">Featured demo</div>
+              <div class="featured-title">School Portal — Demo</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="about" aria-labelledby="about-heading">
+        <h3 id="about-heading">About Nexyte</h3>
+        <p class="muted">We are a team of developers who started Nexyte to build real web projects, help local institutions, and learn by doing. Our name stands for <strong>nexus</strong> — connection — and <strong>byte</strong> — technology. We bring both together to craft meaningful digital experiences.</p>
+
+        <div class="team-grid" role="list">
+          <article class="card" role="listitem">
+            <img src="images/user-ico.png" alt="Nitya smiling" />
+            <h4>Nitya Mishra</h4>
+            <p class="role">CEO & Graphic Designer</p>
+            <p class="card-bio">Loves building top-notch designs and art.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="images/user-ico.png" alt="Siddharth portrait" />
+            <h4>Siddharth Tripathi</h4>
+            <p class="role">Full-stack Developer</p>
+            <p class="card-bio">Front-end, Back-end, Security.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="images/user-ico.png" alt="Shivansh portrait" />
+            <h4>Shivansh Singh</h4>
+            <p class="role">Database Expert</p>
+            <p class="card-bio">APIs, databases and everything server-side.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="images/user-ico.png" alt="Suryansh portrait" />
+            <h4>Suryansh Mishra</h4>
+            <p class="role">UI/UX & DevOps</p>
+            <p class="card-bio">Design systems, deployments and performance.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="services" aria-labelledby="services-heading">
+        <h3 id="services-heading">Services</h3>
+        <p class="muted">We focus on a few key areas so we can deliver quality work quickly. If your need isn't listed, message us and we'll find a solution.</p>
+
+        <div class="service-grid" role="list">
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h4>Custom Website Development</h4>
+            <p>Responsive, accessible websites tailored for schools, hotels and small businesses.</p>
+          </div>
+
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">📚</div>
+            <h4>School & Institute Portals</h4>
+            <p>Student/teacher dashboards, event pages, admission forms and more.</p>
+          </div>
+
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">🏨</div>
+            <h4>Hotel & Booking Sites</h4>
+            <p>Booking-ready websites with room galleries, availability, and contact forms.</p>
+          </div>
+
+          <div class="service-card" role="listitem">
+            <div class="service-icon" aria-hidden="true">⚙️</div>
+            <h4>Maintenance & Hosting</h4>
+            <p>Ongoing support, quick updates, reliable hosting guidance.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading">
+        <h3 id="portfolio-heading">Portfolio & Demos</h3>
+        <p class="muted">We are building demo projects to showcase our skills. Below are a few mockups and concept links.</p>
+
+        <div class="portfolio-grid">
+          <div class="proj-card">
+            <img src="#" alt="school demo screenshot" />
+            <div class="proj-body">
+              <h4>School Portal — Demo</h4>
+              <p>Admissions, events, and simple dashboards. Built as a college project.</p>
+              <div class="proj-links">
+                <a href="#" class="btn small live" data-demo="school" aria-label="Open live demo - School Portal">Live (demo)</a>
+                <a href="#" class="btn small source" data-source="school" aria-label="Open source repository - School Portal">Source</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <img src="#" alt="hotel demo screenshot" />
+            <div class="proj-body">
+              <h4>Hotel Booking Concept</h4>
+              <p>Room galleries, booking mockup and contact/availability forms.</p>
+              <div class="proj-links">
+                <a href="#" class="btn small live" data-demo="hotel" aria-label="Open live demo - Hotel Booking">Live (demo)</a>
+                <a href="#" class="btn small source" data-source="hotel" aria-label="Open source repository - Hotel Booking">Source</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <!-- 1200 width -->
+            <img src="#" alt="business demo screenshot" /> 
+            <div class="proj-body">
+              <h4>Small Business Site</h4>
+              <p>Landing page + contact form for local shops and services.</p>
+              <div class="proj-links">
+                <a href="#" class="btn small live" data-demo="business" aria-label="Open live demo - Small Business">Live (demo)</a>
+                <a href="#" class="btn small source" data-source="business" aria-label="Open source repository - Small Business">Source</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="why" aria-labelledby="why-heading">
+        <div class="why-inner">
+          <div class="why-left">
+            <h4 id="why-heading">Why Choose Nexyte?</h4>
+            <ul>
+              <li>Fresh perspectives & eager to iterate fast.</li>
+              <li>Focus on modern, responsive design.</li>
+              <li>Transparent communication and learning attitude.</li>
+            </ul>
+          </div>
+
+          <div class="why-grid" aria-hidden="true">
+            <div class="fact">
+              <div class="fact-num">Fast</div>
+              <p>We value quick iterations and timely deliveries.</p>
+            </div>
+            <div class="fact">
+              <div class="fact-num">Affordable</div>
+              <p>Student-run pricing for early clients.</p>
+            </div>
+            <div class="fact">
+              <div class="fact-num">Supportive</div>
+              <p>We guide clients through technical choices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact Us</h3>
+        <p class="muted">Want Nexyte to build your site or a demo? Fill this form — we'll get back within a few days.</p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" aria-describedby="contact-desc">
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send Message</button>
+              <a href="mailto:support@nexyte.in?subject=Project%20Enquiry" class="btn outline alt">Or email us</a>
+            </div>
+            <p id="contact-desc" class="muted small">We respond within a few days. Mention "urgent" if needed.</p>
+          </form>
+
+          <aside class="contact-info" aria-label="Contact information">
+            <h4>Get in touch</h4>
+            <p>Email: <a href="mailto:hello@nexyte.example">support@nexyte.in</a></p>
+            <p>Location: Prayagraj, Uttar Pradesh (we work remotely too)</p>
+
+            <div class="follow">
+              <h5>Follow us</h5>
+              <div class="socials">
+                <a class="social" href="https://github.com/nexyte1">GitHub</a>
+                <a class="social" href="https://linkedin.com/nexyte">LinkedIn</a>
+                <a class="social" href="https://instagram.com/nexyte.in">Instagram</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="brand small">
+          <div class="logo small" aria-hidden="true">
+            <img class="logo-img logo-light" src="images/logo-light.png" alt="Nexyte logo (light) small">
+            <img class="logo-img logo-dark"  src="images/logo-dark.png"  alt="Nexyte logo (dark) small">
+          </div>
+
+          <div class="brand-text">
+            <p class="brand-title">Nexyte</p>
+            <p class="sub small">coding ideas into reality</p>
+          </div>
+        </div>
+        <p class="copyright">© <span id="year"></span> Nexyte. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
