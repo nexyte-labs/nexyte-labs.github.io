@@ -14,7 +14,7 @@
     <!-- Header -->
     <header class="site-header" role="banner">
       <div class="container header-inner">
-        <div class="brand" aria-hidden="false">
+        <a href="#top" class="brand" aria-label="Nexyte home">
           <div class="logo" aria-hidden="true">
             <img class="logo-img logo-light" src="images/logo-light.png" alt="Nexyte logo (light)">
             <img class="logo-img logo-dark"  src="images/logo-dark.png"  alt="Nexyte logo (dark)">
@@ -24,13 +24,19 @@
             <h1>Nexyte</h1>
             <p class="sub">coding ideas into reality</p>
           </div>
-        </div>
+        </a>
+
 
         <nav id="main-nav" class="nav" role="navigation" aria-label="Primary">
+          <a href="#top">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="courses.html">Courses</a>
+          <a href="tools.html">Tools</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="nav-cta">Contact</a>
           <button id="theme-toggle" class="btn-toggle" aria-pressed="false">Dark</button>
         </nav>
 
@@ -40,7 +46,7 @@
 
     <main class="container" id="top">
       <!-- HERO -->
-      <section class="hero" aria-labelledby="hero-heading">
+      <section class="hero reveal" aria-labelledby="hero-heading">
         <div class="hero-left">
           <span class="eyebrow">Team • Web Development</span>
           <h2 id="hero-heading">We create clean and modern websites with the enthusiasm and the precision of professionals.</h2>
@@ -51,25 +57,29 @@
           <div class="hero-ctas">
             <a href="#contact" class="btn primary">Get a Quote</a>
             <a href="#portfolio" class="btn outline">View Demos</a>
+            <a href="#contact" class="btn outline demo-request" data-request="demo">
+              Request a Demo
+            </a>
           </div>
 
-          <div class="stats" aria-hidden="true">
+
+          <div class="stats reveal" aria-hidden="true">
             <div class="stat">
               <div class="num">0+</div>
               <div class="label">Clients (starting out)</div>
             </div>
-            <div class="stat">
+            <div class="stat reveal">
               <div class="num">4</div>
               <div class="label">Team Members</div>
             </div>
-            <div class="stat">
+            <div class="stat reveal">
               <div class="num">100%</div>
               <div class="label">Learning Mindset</div>
             </div>
           </div>
         </div>
 
-        <div class="hero-right" aria-hidden="true">
+        <div class="hero-right reveal" aria-hidden="true">
           <div class="hero-image">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80" alt="Team collaborating on laptops" />
             <div class="featured" aria-hidden="true">
@@ -81,33 +91,34 @@
       </section>
 
       <!-- ABOUT -->
-      <section id="about" class="about" aria-labelledby="about-heading">
+      <section id="about" class="about reveal" aria-labelledby="about-heading">
+        
         <h3 id="about-heading">About Nexyte</h3>
         <p class="muted">We are a team of developers who started Nexyte to build real web projects, help local institutions, and learn by doing. Our name stands for <strong>nexus</strong> — connection — and <strong>byte</strong> — technology. We bring both together to craft meaningful digital experiences.</p>
 
         <div class="team-grid" role="list">
-          <article class="card" role="listitem">
+          <article class="card reveal delay-1" role="listitem">
             <img src="images/user-ico.png" alt="Nitya smiling" />
-            <h4>Nitya Mishra</h4>
-            <p class="role">CEO & Graphic Designer</p>
+            <h4>Vishal Dubey</h4>
+            <p class="role">CTO</p>
             <p class="card-bio">Loves building top-notch designs and art.</p>
           </article>
 
-          <article class="card" role="listitem">
+          <article class="card reveal delay-2" role="listitem">
             <img src="images/user-ico.png" alt="Siddharth portrait" />
             <h4>Siddharth Tripathi</h4>
             <p class="role">Full-stack Developer</p>
             <p class="card-bio">Front-end, Back-end, Security.</p>
           </article>
 
-          <article class="card" role="listitem">
+          <article class="card reveal delay-3" role="listitem">
             <img src="images/user-ico.png" alt="Shivansh portrait" />
             <h4>Shivansh Singh</h4>
             <p class="role">Database Expert</p>
             <p class="card-bio">APIs, databases and everything server-side.</p>
           </article>
 
-          <article class="card" role="listitem">
+          <article class="card reveal delay-4" role="listitem">
             <img src="images/user-ico.png" alt="Suryansh portrait" />
             <h4>Suryansh Mishra</h4>
             <p class="role">UI/UX & DevOps</p>
@@ -115,46 +126,207 @@
           </article>
         </div>
       </section>
+            <!-- MISSION -->
+      <section class="mission reveal" aria-labelledby="mission-heading">
+        <h3 id="mission-heading">Our Mission</h3>
+        <p class="muted">
+          At Nexyte, our mission is to help institutions and local businesses step confidently into the digital world.
+          We believe modern websites should be accessible, fast, and easy to use — not complicated or overpriced.
+        </p>
 
-      <!-- SERVICES -->
-      <section id="services" class="services" aria-labelledby="services-heading">
-        <h3 id="services-heading">Services</h3>
-        <p class="muted">We focus on a few key areas so we can deliver quality work quickly. If your need isn't listed, message us and we'll find a solution.</p>
-
-        <div class="service-grid" role="list">
-          <div class="service-card" role="listitem">
-            <div class="service-icon" aria-hidden="true">&lt;/&gt;</div>
-            <h4>Custom Website Development</h4>
-            <p>Responsive, accessible websites tailored for schools, hotels and small businesses.</p>
+        <div class="mission-grid">
+          <div class="mission-card reveal delay-1">
+            <h4>Learn by Building</h4>
+            <p>
+              We grow by working on real-world projects that challenge us and improve our skills.
+            </p>
           </div>
 
-          <div class="service-card" role="listitem">
-            <div class="service-icon" aria-hidden="true">📚</div>
-            <h4>School & Institute Portals</h4>
-            <p>Student/teacher dashboards, event pages, admission forms and more.</p>
+          <div class="mission-card reveal delay-2">
+            <h4>Support Local Growth</h4>
+            <p>
+              We aim to empower schools, hotels, and small businesses with affordable, reliable web solutions.
+            </p>
           </div>
 
-          <div class="service-card" role="listitem">
-            <div class="service-icon" aria-hidden="true">🏨</div>
-            <h4>Hotel & Booking Sites</h4>
-            <p>Booking-ready websites with room galleries, availability, and contact forms.</p>
-          </div>
-
-          <div class="service-card" role="listitem">
-            <div class="service-icon" aria-hidden="true">⚙️</div>
-            <h4>Maintenance & Hosting</h4>
-            <p>Ongoing support, quick updates, reliable hosting guidance.</p>
+          <div class="mission-card reveal delay-3">
+            <h4>Quality & Transparency</h4>
+            <p>
+              Clear communication, honest timelines, and clean code are at the core of everything we build.
+            </p>
           </div>
         </div>
       </section>
 
+
+      <!-- SERVICES -->
+      <section id="services" class="services reveal" aria-labelledby="services-heading">
+        <h3 id="services-heading">Services</h3>
+        <p class="muted">We focus on a few key areas so we can deliver quality work quickly. If your need isn't listed, message us and we'll find a solution.</p>
+        <p class="muted">
+          Prices may vary based on features and complexity. Contact us for a custom quote.
+        </p>
+
+
+        <div class="service-grid" role="list">
+          <div class="service-card reveal delay-1" role="listitem">
+            <div class="service-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h4>Custom Website Development</h4>
+            <p>Responsive, accessible websites tailored for schools, hotels and small businesses.</p>
+            <span class="price">Starting from ₹6,000</span>
+          </div>
+
+
+          <div class="service-card reveal delay-2" role="listitem">
+            <div class="service-icon" aria-hidden="true">📚</div>
+            <h4>School & Institute Portals</h4>
+            <p>Student/teacher dashboards, admissions, events and internal tools.</p>
+            <span class="price">Starting from ₹8,000</span>
+          </div>
+              
+
+          <div class="service-card reveal delay-3" role="listitem">
+            <div class="service-icon" aria-hidden="true">🏨</div>
+            <h4>Hotel & Booking Websites</h4>
+            <p>Room galleries, booking requests, availability and contact forms.</p>
+            <span class="price">Starting from ₹7,000</span>
+          </div>
+
+          <div class="service-card reveal delay-4" role="listitem">
+            <div class="service-icon" aria-hidden="true">📢</div>
+            <h4>Digital Marketing</h4>
+            <p>
+              Social media management, basic SEO, content strategy, and online presence
+              setup for schools and local businesses.
+            </p>
+            <span class="price">Starting from ₹3,000 / month</span>
+          </div>
+
+          <div class="service-card reveal delay-1" role="listitem">
+            <div class="service-icon" aria-hidden="true">📱</div>
+            <h4>App Development</h4>
+            <p>Basic Android and web apps for portals and internal systems.</p>
+            <span class="price">Starting from ₹10,000</span>
+          </div>
+
+
+          <div class="service-card reveal delay-2" role="listitem">
+            <div class="service-icon" aria-hidden="true">🛠️</div>
+            <h4>Technical Support & Maintenance</h4>
+            <p>Bug fixes, updates, performance improvements and ongoing support.</p>
+            <span class="price">Starting from ₹1,000 / month</span>
+          </div>
+
+          <div class="service-card reveal delay-3" role="listitem">
+            <div class="service-icon" aria-hidden="true">🔐</div>
+            <h4>Security & Optimization</h4>
+            <p>Performance tuning, basic security hardening and best practices.</p>
+            <span class="price">Starting from ₹2,000</span>
+          </div>
+
+        </div>
+        
+      </section>
+
+      
+
+      <!-- FREE WEBSITE AUDIT -->
+      <section class="audit reveal" aria-labelledby="audit-heading">
+        <div class="audit-card">
+          <div class="audit-text">
+            <h3 id="audit-heading">Free Website Audit</h3>
+            <p class="muted">
+              Already have a website? We’ll review its design, performance,
+              accessibility, and usability — and suggest improvements.
+            </p>
+          </div>
+          <a href="#contact" class="btn primary audit-request">
+            Request Free Audit
+          </a>
+        </div>
+      </section>
+
+      <!-- COURSES OVERVIEW -->
+      <section class="courses-overview reveal" aria-labelledby="courses-heading">
+        <h3 id="courses-heading">Programming Courses</h3>
+        <p class="muted">
+          Along with web solutions, Nexyte also provides beginner to advance programming
+          courses designed for students who want to build real-world skills.
+        </p>
+
+        <div class="courses-preview reveal">
+          <div class="course-preview-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Web Development">
+            <h4>Web Development</h4>
+            <p>HTML, CSS, JavaScript fundamentals with real projects.</p>
+          </div>
+
+          <div class="course-preview-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="Python Programming">
+            <h4>Python Programming</h4>
+            <p>Programming basics, logic building, and automation.</p>
+          </div>
+
+          <div class="course-preview-card reveal delay-3">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80" alt="C Programming">
+            <h4>C / C++</h4>
+            <p>Strong foundations in problem-solving and data structures.</p>
+          </div>
+        </div>
+
+        <a href="courses.html" class="btn outline">
+          View All Courses →
+        </a>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section id="process" class="process reveal" aria-labelledby="process-heading">
+        <h3 id="process-heading">How We Work</h3>
+        <p class="muted">
+          We follow a simple and transparent process so you always know what’s happening with your project.
+        </p>
+
+        <div class="process-grid">
+          <div class="process-step reveal delay-1">
+            <span class="step-num">01</span>
+            <h4>Requirement Discussion</h4>
+            <p>We understand your goals, audience, and features through a quick discussion.</p>
+          </div>
+
+          <div class="process-step reveal delay-2">
+            <span class="step-num">02</span>
+            <h4>Design & Planning</h4>
+            <p>We create layouts and plan the structure before starting development.</p>
+          </div>
+
+          <div class="process-step reveal delay-3">
+            <span class="step-num">03</span>
+            <h4>Development</h4>
+            <p>We build the website using modern, clean, and maintainable code.</p>
+          </div>
+
+          <div class="process-step reveal delay-1">
+            <span class="step-num">04</span>
+            <h4>Review & Feedback</h4>
+            <p>You review the work and suggest changes before final delivery.</p>
+          </div>
+
+          <div class="process-step reveal delay-2">
+            <span class="step-num">05</span>
+            <h4>Launch & Support</h4>
+            <p>We deploy the site and provide help with updates and maintenance.</p>
+          </div>
+        </div>
+      </section>
+
+
       <!-- PORTFOLIO -->
-      <section id="portfolio" class="portfolio" aria-labelledby="portfolio-heading">
+      <section id="portfolio" class="portfolio reveal" aria-labelledby="portfolio-heading">
         <h3 id="portfolio-heading">Portfolio & Demos</h3>
         <p class="muted">We are building demo projects to showcase our skills. Below are a few mockups and concept links.</p>
 
         <div class="portfolio-grid">
-          <div class="proj-card">
+          <div class="proj-card reveal delay-1">
             <img src="#" alt="school demo screenshot" />
             <div class="proj-body">
               <h4>School Portal — Demo</h4>
@@ -162,11 +334,14 @@
               <div class="proj-links">
                 <a href="#" class="btn small live" data-demo="school" aria-label="Open live demo - School Portal">Live (demo)</a>
                 <a href="#" class="btn small source" data-source="school" aria-label="Open source repository - School Portal">Source</a>
+                <a href="#contact" class="btn small outline demo-request">
+                  Request Demo
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="proj-card">
+          <div class="proj-card reveal delay-2">
             <img src="#" alt="hotel demo screenshot" />
             <div class="proj-body">
               <h4>Hotel Booking Concept</h4>
@@ -174,11 +349,14 @@
               <div class="proj-links">
                 <a href="#" class="btn small live" data-demo="hotel" aria-label="Open live demo - Hotel Booking">Live (demo)</a>
                 <a href="#" class="btn small source" data-source="hotel" aria-label="Open source repository - Hotel Booking">Source</a>
+                <a href="#contact" class="btn small outline demo-request">
+                  Request Demo
+                </a>
               </div>
             </div>
           </div>
 
-          <div class="proj-card">
+          <div class="proj-card reveal delay-3">
             <!-- 1200 width -->
             <img src="#" alt="business demo screenshot" /> 
             <div class="proj-body">
@@ -187,6 +365,9 @@
               <div class="proj-links">
                 <a href="#" class="btn small live" data-demo="business" aria-label="Open live demo - Small Business">Live (demo)</a>
                 <a href="#" class="btn small source" data-source="business" aria-label="Open source repository - Small Business">Source</a>
+                <a href="#contact" class="btn small outline demo-request">
+                  Request Demo
+                </a>
               </div>
             </div>
           </div>
@@ -194,7 +375,7 @@
       </section>
 
       <!-- WHY CHOOSE US -->
-      <section class="why" aria-labelledby="why-heading">
+      <section class="why reveal" aria-labelledby="why-heading">
         <div class="why-inner">
           <div class="why-left">
             <h4 id="why-heading">Why Choose Nexyte?</h4>
@@ -206,15 +387,15 @@
           </div>
 
           <div class="why-grid" aria-hidden="true">
-            <div class="fact">
+            <div class="fact reveal delay-1">
               <div class="fact-num">Fast</div>
               <p>We value quick iterations and timely deliveries.</p>
             </div>
-            <div class="fact">
+            <div class="fact reveal delay-2">
               <div class="fact-num">Affordable</div>
               <p>Student-run pricing for early clients.</p>
             </div>
-            <div class="fact">
+            <div class="fact reveal delay-3">
               <div class="fact-num">Supportive</div>
               <p>We guide clients through technical choices.</p>
             </div>
@@ -222,13 +403,77 @@
         </div>
       </section>
 
+      <!-- FAQ -->
+      <section id="faq" class="faq reveal" aria-labelledby="faq-heading">
+        <h3 id="faq-heading">Frequently Asked Questions</h3>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              How long does it take to build a website?
+            </button>
+            <div class="faq-answer">
+              Most projects take 1–3 weeks depending on size and requirements.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you provide hosting and domain support?
+            </button>
+            <div class="faq-answer">
+              Yes, we guide you in choosing hosting and help with setup if needed.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can you update the website later?
+            </button>
+            <div class="faq-answer">
+              Absolutely. We offer maintenance and update support.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Are your services affordable for schools?
+            </button>
+            <div class="faq-answer">
+              Yes. We offer flexible and affordable pricing.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <!-- CONTACT -->
-      <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <section id="contact" class="contact reveal delay-1" aria-labelledby="contact-heading">
         <h3 id="contact-heading">Contact Us</h3>
         <p class="muted">Want Nexyte to build your site or a demo? Fill this form — we'll get back within a few days.</p>
 
-        <div class="contact-grid">
-          <form id="contact-form" class="contact-form" aria-describedby="contact-desc">
+        <div class="contact-grid reveal delay-1">
+          
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://www.formbackend.com/f/2090050a3bce2d75"
+            method="POST"
+            
+          >
+            <div class="form-row">
+              <label for="purpose">Purpose</label>
+              <select id="purpose" name="purpose" required>
+                <option value="" disabled selected>Select purpose</option>
+                <option value="enquiry">General Enquiry</option>
+                <option value="partnership">Partnership</option>
+                <option value="course">Course Related</option>
+                <option value="technical">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
             <div class="form-row">
               <label for="name">Full name</label>
               <input id="name" type="text" name="name" placeholder="Your name" required>
@@ -241,17 +486,23 @@
 
             <div class="form-row">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Tell us about your request" required></textarea>
             </div>
 
             <div class="form-actions">
               <button type="submit" class="btn primary">Send Message</button>
-              <a href="mailto:support@nexyte.in?subject=Project%20Enquiry" class="btn outline alt">Or email us</a>
+              <a href="mailto:support@nexyte.in?subject=Project%20Enquiry"
+                class="btn outline alt">Or email us</a>
             </div>
-            <p id="contact-desc" class="muted small">We respond within a few days. Mention "urgent" if needed.</p>
+
+            <p id="contact-desc" class="muted small">
+              We respond within a few days. Mention "urgent" if needed.
+            </p>
           </form>
 
-          <aside class="contact-info" aria-label="Contact information">
+
+          <aside class="contact-info reveal delay-2" aria-label="Contact information">
             <h4>Get in touch</h4>
             <p>Email: <a href="mailto:hello@nexyte.example">support@nexyte.in</a></p>
             <p>Location: Prayagraj, Uttar Pradesh (we work remotely too)</p>
@@ -259,7 +510,7 @@
             <div class="follow">
               <h5>Follow us</h5>
               <div class="socials">
-                <a class="social" href="https://github.com/nexyte1">GitHub</a>
+                <a class="social" href="https://github.com/nexyte-labs">GitHub</a>
                 <a class="social" href="https://linkedin.com/nexyte">LinkedIn</a>
                 <a class="social" href="https://instagram.com/nexyte.in">Instagram</a>
               </div>
@@ -288,5 +539,18 @@
     </footer>
   </div>
   <script src="script.js"></script>
+  <!-- SUCCESS POPUP -->
+  <div id="success-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-icon">✅</div>
+      <h3>Response Submitted</h3>
+      <p class="muted">
+        Your response has been submitted successfully.<br>
+        We will get back to you soon.
+      </p>
+      <button id="close-modal" class="btn primary">Close</button>
+    </div>
+  </div>
+
 </body>
 </html>

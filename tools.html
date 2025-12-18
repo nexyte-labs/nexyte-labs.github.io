@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nexyte Tools</title>
+  <meta name="description" content="Free and paid tools by Nexyte" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html#top" class="brand">
+        <div class="logo">
+          <img class="logo-img logo-light" src="images/logo-light.png">
+          <img class="logo-img logo-dark" src="images/logo-dark.png">
+        </div>
+        <div class="brand-text">
+          <h1>Nexyte</h1>
+          <p class="sub">coding ideas into reality</p>
+        </div>
+      </a>
+
+      <nav id="main-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="tools.html" class="active">Tools</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <button id="theme-toggle" class="btn-toggle" aria-pressed="false">Dark</button>
+      </nav>
+
+      <button id="mobile-toggle" class="mobile-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <section class="reveal">
+      <h2>Tools by Nexyte</h2>
+      <p class="muted">
+        Free and premium tools built by Nexyte to help schools,
+        institutes, and students manage work efficiently.
+      </p>
+    </section>
+
+    <!-- TOOLS LIST -->
+    <section class="tools-list reveal">
+
+      <!-- TOOL CARD -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div>
+            <h3>Attendance Tracker</h3>
+            <span class="tool-tag free">FREE</span>
+          </div>
+          <button class="tool-toggle">View Details</button>
+        </div>
+
+        <div class="tool-body">
+            <p>
+                A smart attendance tracking tool built for students to monitor their
+                subject-wise attendance and stay eligible for exams. It helps students
+                calculate how many classes they need to attend to maintain the minimum
+                75% attendance — or how many classes they can safely miss if they are
+                already above the limit.
+            </p>
+
+            <ul class="tool-features">
+                <li>✔ Subject-wise attendance tracking</li>
+                <li>✔ Calculates required classes to reach 75%</li>
+                <li>✔ Shows how many classes you can miss if attendance is above 75%</li>
+                <li>✔ Simple, student-friendly interface</li>
+                <li>✔ Lightweight, fast, and easy to use</li>
+            </ul>
+            <p class="muted small">
+              Ideal for college and university students following the 75% attendance rule.
+            </p>
+
+
+
+          <a href="downloads/attendance-tracker.zip"
+             class="btn primary"
+             download>
+            Download Tool
+          </a>
+        </div>
+      </div>
+
+      <!-- FUTURE TOOL (EXAMPLE) -->
+      <div class="tool-card">
+        <div class="tool-header">
+          <div>
+            <h3>Admission Form Manager</h3>
+            <span class="tool-tag paid">PAID</span>
+          </div>
+          <button class="tool-toggle">View Details</button>
+        </div>
+
+        <div class="tool-body">
+          <p>
+            Manage student admission forms digitally with validation,
+            export options, and simple dashboards.
+          </p>
+
+          <ul class="tool-features">
+            <li>✔ Online admission forms</li>
+            <li>✔ Export to Excel</li>
+            <li>✔ Secure data handling</li>
+          </ul>
+
+          <a href="index.html#contact" class="btn outline">
+            Contact to Access
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Nexyte. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

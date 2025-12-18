@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nexyte Courses</title>
+  <meta name="description" content="Programming courses by Nexyte" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      <!-- Brand -->
+      <a href="index.html#top" class="brand" aria-label="Nexyte home">
+        <div class="logo">
+          <img class="logo-img logo-light" src="images/logo-light.png" alt="Nexyte logo light">
+          <img class="logo-img logo-dark" src="images/logo-dark.png" alt="Nexyte logo dark">
+        </div>
+        <div class="brand-text">
+          <h1>Nexyte</h1>
+          <p class="sub">coding ideas into reality</p>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav id="main-nav" class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="tools.html">Tools</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <button id="theme-toggle" class="btn-toggle" aria-pressed="false">Dark</button>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" id="top">
+    <section class="reveal">
+      <h2>Programming Courses</h2>
+      <p class="muted">
+        Beginner to advance programming courses focused on strong fundamentals,
+        practical skills, and real-world applications.
+      </p>
+    </section>
+
+    <!-- COURSES GRID -->
+    <section class="courses-grid reveal">
+
+      <!-- Web Development -->
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Web Development">
+        <span class="discount-badge">90% OFF</span>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, responsive design, real-world projects.</p>
+        <div class="course-price">
+          <span class="old-price">₹5,999</span>
+          <span class="new-price">₹599</span>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80" alt="Python Programming">
+        <span class="discount-badge">90% OFF</span>
+        <h3>Python Programming</h3>
+        <p>Python basics, logic building, automation & scripting.</p>
+        <div class="course-price">
+          <span class="old-price">₹4,999</span>
+          <span class="new-price">₹499</span>
+        </div>
+      </div>
+
+      <!-- C Programming -->
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="C Programming">
+        <span class="discount-badge">90% OFF</span>
+        <h3>C Programming</h3>
+        <p>Programming fundamentals, memory concepts, problem solving.</p>
+        <div class="course-price">
+          <span class="old-price">₹3,999</span>
+          <span class="new-price">₹399</span>
+        </div>
+      </div>
+
+      <!-- C++ -->
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80" alt="C++ Programming">
+        <span class="discount-badge">90% OFF</span>
+        <h3>C++ Programming</h3>
+        <p>OOP concepts, STL basics, and algorithmic thinking.</p>
+        <div class="course-price">
+          <span class="old-price">₹4,999</span>
+          <span class="new-price">₹499</span>
+        </div>
+      </div>
+
+      <!-- Java -->
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Java Programming">
+        <span class="discount-badge">90% OFF</span>
+        <h3>Java Programming</h3>
+        <p>Core Java, OOP principles, backend fundamentals.</p>
+        <div class="course-price">
+          <span class="old-price">₹5,999</span>
+          <span class="new-price">₹599</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="brand small">
+          <div class="logo small" aria-hidden="true">
+            <img class="logo-img logo-light" src="images/logo-light.png" alt="Nexyte logo (light) small">
+            <img class="logo-img logo-dark"  src="images/logo-dark.png"  alt="Nexyte logo (dark) small">
+          </div>
+
+          <div class="brand-text">
+            <p class="brand-title">Nexyte</p>
+            <p class="sub small">coding ideas into reality</p>
+          </div>
+        </div>
+        <p class="copyright">© <span id="year"></span> Nexyte. All rights reserved.</p>
+      </div>
+    </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

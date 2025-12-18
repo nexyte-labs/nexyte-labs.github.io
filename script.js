@@ -96,16 +96,50 @@
     }, timeout);
   }
 
-  // Contact form: prevent real submit (no backend included) and show in-page confirmation
+  // ==============================
+  // Contact Form - FormBackend + Success Popup
+  // ==============================
+  const successModal = document.getElementById('success-modal');
+  const closeModalBtn = document.getElementById('close-modal');
+
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      // Basic client-side validation already enforced by required attributes
-      const name = (contactForm.querySelector('[name="name"]') || {}).value || '';
-      showToast(`Thanks ${name ? name.split(' ')[0] : ''}! Message received. We'll reply to your email shortly.`);
-      contactForm.reset();
+
+      const formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Submission failed');
+        
+        contactForm.reset();
+        if (successModal) {
+          successModal.classList.add('active');
+          successModal.setAttribute('aria-hidden', 'false');
+        } else {
+          showToast('Your response was submitted successfully. We will get back to you soon.');
+        }
+
+      })
+      .catch(() => {
+        showToast('Something went wrong. Please try again.');
+      });
     });
   }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', function () {
+      successModal.classList.remove('active');
+      successModal.setAttribute('aria-hidden', 'true');
+    });
+  }
+
 
   // Add basic styles for toast (injected here so no extra file needed)
   (function addToastStyles() {
@@ -133,5 +167,136 @@
     `;
     document.head.appendChild(style);
   })();
+  // ==============================
+// ==============================
+  // Scroll Reveal (Repeat on Scroll)
+  // ==============================
+  (function () {
+    const elements = document.querySelectorAll('.reveal');
+
+    function handleScrollReveal() {
+      const windowHeight = window.innerHeight;
+      const revealOffset = 120;
+
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+
+        // Element enters viewport
+        if (rect.top < windowHeight - revealOffset && rect.bottom > revealOffset) {
+          el.classList.add('visible');
+        } 
+        // Element leaves viewport → reset animation
+        else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScrollReveal);
+    window.addEventListener('resize', handleScrollReveal);
+    window.addEventListener('load', handleScrollReveal);
+  })();
+
+  // Free audit prefill
+  document.querySelectorAll('.audit-request').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const message = document.getElementById('message');
+      if (!message) return;
+
+      message.value =
+        "Hi Nexyte team,\n\n" +
+        "I would like to request a FREE website audit.\n\n" +
+        "Website URL:\n" +
+        "What I want to improve:\n\n";
+
+      message.focus();
+    });
+  });
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+
+  // ==============================
+  // Active Nav Link on Scroll
+  // ==============================
+  const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+  const sections = Array.from(navLinks).map(link =>
+    document.querySelector(link.getAttribute('href'))
+  );
+
+  function updateActiveNav() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((section, index) => {
+      if (!section) return;
+      const offsetTop = section.offsetTop - 120;
+      const offsetBottom = offsetTop + section.offsetHeight;
+
+      if (scrollY >= offsetTop && scrollY < offsetBottom) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('load', updateActiveNav);
+
+  // Auto-fill message placeholder based on purpose
+  const purposeSelect = document.getElementById('purpose');
+  if (purposeSelect) {
+    purposeSelect.addEventListener('change', function () {
+      const message = document.getElementById('message');
+      if (!message) return;
+
+      switch (this.value) {
+        case 'course':
+          message.placeholder = 'Tell us which course you are interested in...';
+          break;
+        case 'technical':
+          message.placeholder = 'Describe the technical issue you are facing...';
+          break;
+        case 'partnership':
+          message.placeholder = 'Tell us about the partnership proposal...';
+          break;
+        default:
+          message.placeholder = 'Tell us about your request...';
+      }
+    });
+  }
+
+  // ==============================
+  // Tools accordion toggle
+  // ==============================
+  document.querySelectorAll('.tool-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.tool-card');
+      card.classList.toggle('active');
+      btn.textContent = card.classList.contains('active')
+        ? 'Hide Details'
+        : 'View Details';
+    });
+  });
+
+
 
 })();
+
+document.querySelectorAll('.demo-request').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    const messageField = document.getElementById('message');
+    if (!messageField) return;
+
+    messageField.value =
+      "Hi Nexyte team,\n" +
+      "I would like to request a live demo of one of your projects.\n" +
+      "Preferred demo type (optional): School / Hotel / Business\n" +
+      "Please let me know the next steps.\n";
+
+    messageField.focus();
+  });
+});
